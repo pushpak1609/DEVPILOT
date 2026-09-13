@@ -1,5 +1,4 @@
 # --- Secrets ---
-backend/src/main/resources/application.properties
 **/application-local.properties
 .env
 .env.*
