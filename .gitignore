@@ -1,0 +1,26 @@
+# --- Secrets ---
+backend/src/main/resources/application.properties
+**/application-local.properties
+.env
+.env.*
+body.json
+
+# --- Backend (Maven/Java) ---
+backend/target/
+backend/.mvn/wrapper/maven-wrapper.jar
+*.class
+*.log
+
+# --- Frontend (Next.js) ---
+client/node_modules/
+client/.next/
+client/out/
+client/.env*
+client/*.tsbuildinfo
+client/next-env.d.ts
+
+# --- Editors / OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
