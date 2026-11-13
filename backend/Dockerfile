@@ -16,11 +16,13 @@ RUN ./mvnw clean package -DskipTests -B
 # --- Run stage ---
 FROM eclipse-temurin:21-jre
 WORKDIR /app
+RUN groupadd --system app && useradd --system --gid app app
 COPY --from=build /app/target/*.jar app.jar
 
 # Render assigns a dynamic $PORT at runtime — Spring must bind to it,
 # not the hardcoded 8080 used in local dev.
 ENV PORT=8080
 EXPOSE 8080
+USER app
 
-ENTRYPOINT ["sh", "-c", "java -jar app.jar --server.port=${PORT}"]
+ENTRYPOINT ["sh", "-c", "exec java -jar app.jar --server.port=${PORT}"]
