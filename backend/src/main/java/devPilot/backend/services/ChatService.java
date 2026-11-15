@@ -25,6 +25,8 @@ import devPilot.backend.services.ai.CitationMapper;
 import devPilot.backend.services.ai.CodeContextRetriever;
 import lombok.RequiredArgsConstructor;
 
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * Chat sessions and the RAG chat pipeline entry point.
  *
@@ -33,6 +35,7 @@ import lombok.RequiredArgsConstructor;
  * Each step is implemented in a dedicated class under {@code service.ai}.
  */
 @Service
+@Slf4j
 @RequiredArgsConstructor
 public class ChatService {
 
@@ -133,6 +136,8 @@ public class ChatService {
         // 4. Build LLM prompts from retrieved context + question
         String systemPrompt = chatPromptBuilder.systemPrompt(repo.getFullName());
         String userPrompt = chatPromptBuilder.userPrompt(retrievedContext.contextText(), userContent);
+        log.info("RAG prompt sizes: systemChars={}, userChars={}, citations={}",
+        systemPrompt.length(), userPrompt.length(), retrievedContext.citations().size());
 
         // 5. Stream OpenAI response to the client (SSE)
         return chatStreamHandler.stream(

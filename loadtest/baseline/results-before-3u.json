@@ -1,0 +1,197 @@
+{
+  "config": {
+    "BASE": "http://localhost:8080",
+    "USERS": 3,
+    "MESSAGES": 5,
+    "LABEL": "before"
+  },
+  "summary": {
+    "requests": 15,
+    "succeeded": 11,
+    "failed": 4,
+    "errors": {
+      "error event from server": 4
+    },
+    "wallSeconds": 85.8,
+    "successfulRequestsPerSecond": 0.13
+  },
+  "rows": [
+    {
+      "metric": "before LLM: headers (ms)",
+      "p50": 583.1,
+      "p95": 1183.8,
+      "p99": 1183.8,
+      "avg": 669.8,
+      "max": 1183.8
+    },
+    {
+      "metric": "TTFT (ms)",
+      "p50": 5841.4,
+      "p95": 40012.5,
+      "p99": 40012.5,
+      "avg": 9893,
+      "max": 40012.5
+    },
+    {
+      "metric": "end-to-end (ms)",
+      "p50": 7167.8,
+      "p95": 41461.8,
+      "p99": 41461.8,
+      "avg": 11170.4,
+      "max": 41461.8
+    },
+    {
+      "metric": "inter-token (ms)",
+      "p50": 2.8,
+      "p95": 10.5,
+      "p99": 10.5,
+      "avg": 4,
+      "max": 10.5
+    },
+    {
+      "metric": "stream chunks/s per request",
+      "p50": 363.9,
+      "p95": 475.4,
+      "p99": 475.4,
+      "avg": 334.8,
+      "max": 475.4
+    }
+  ],
+  "results": [
+    {
+      "ok": true,
+      "status": 200,
+      "headersMs": 750.7964999999995,
+      "ttft": 1754.7600999999995,
+      "e2e": 4003.4046,
+      "tokens": 215,
+      "error": null
+    },
+    {
+      "ok": true,
+      "status": 200,
+      "headersMs": 591.3121000000001,
+      "ttft": 3468.4844999999996,
+      "e2e": 4545.671699999999,
+      "tokens": 119,
+      "error": null
+    },
+    {
+      "ok": true,
+      "status": 200,
+      "headersMs": 866.5618000000004,
+      "ttft": 3704.523,
+      "e2e": 6189.849999999999,
+      "tokens": 729,
+      "error": null
+    },
+    {
+      "ok": true,
+      "status": 200,
+      "headersMs": 1183.8341999999993,
+      "ttft": 2115.9735,
+      "e2e": 2616.7657,
+      "tokens": 127,
+      "error": null
+    },
+    {
+      "ok": true,
+      "status": 200,
+      "headersMs": 566.2049999999999,
+      "ttft": 4705.689,
+      "e2e": 5031.213600000001,
+      "tokens": 91,
+      "error": null
+    },
+    {
+      "ok": false,
+      "status": 200,
+      "headersMs": 546.1966999999986,
+      "ttft": null,
+      "e2e": null,
+      "tokens": 0,
+      "error": "error event from server"
+    },
+    {
+      "ok": true,
+      "status": 200,
+      "headersMs": 580.3262000000013,
+      "ttft": 10558.4984,
+      "e2e": 12124.9114,
+      "tokens": 570,
+      "error": null
+    },
+    {
+      "ok": false,
+      "status": 200,
+      "headersMs": 616.5691999999999,
+      "ttft": null,
+      "e2e": null,
+      "tokens": 0,
+      "error": "error event from server"
+    },
+    {
+      "ok": true,
+      "status": 200,
+      "headersMs": 583.0522999999994,
+      "ttft": 5841.398199999996,
+      "e2e": 7167.818299999999,
+      "tokens": 517,
+      "error": null
+    },
+    {
+      "ok": false,
+      "status": 200,
+      "headersMs": 1316.3603000000003,
+      "ttft": null,
+      "e2e": null,
+      "tokens": 0,
+      "error": "error event from server"
+    },
+    {
+      "ok": true,
+      "status": 200,
+      "headersMs": 563.3778999999995,
+      "ttft": 8798.9142,
+      "e2e": 9993.533900000002,
+      "tokens": 564,
+      "error": null
+    },
+    {
+      "ok": false,
+      "status": 200,
+      "headersMs": 538.9393999999993,
+      "ttft": null,
+      "e2e": null,
+      "tokens": 0,
+      "error": "error event from server"
+    },
+    {
+      "ok": true,
+      "status": 200,
+      "headersMs": 549.8462999999974,
+      "ttft": 14878.655599999998,
+      "e2e": 15773.497199999998,
+      "tokens": 424,
+      "error": null
+    },
+    {
+      "ok": true,
+      "status": 200,
+      "headersMs": 626.8139999999985,
+      "ttft": 12983.384499999993,
+      "e2e": 13966.203799999996,
+      "tokens": 467,
+      "error": null
+    },
+    {
+      "ok": true,
+      "status": 200,
+      "headersMs": 505.88760000000184,
+      "ttft": 40012.47720000001,
+      "e2e": 41461.8144,
+      "tokens": 689,
+      "error": null
+    }
+  ]
+}

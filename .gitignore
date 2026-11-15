@@ -6,6 +6,9 @@ body.json
 
 *.tar
 
+loadtest/results-*.json
+loadtest/quality-*.json
+
 # --- Backend (Maven/Java) ---
 backend/target/
 backend/.mvn/wrapper/maven-wrapper.jar

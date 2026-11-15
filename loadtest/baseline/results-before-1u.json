@@ -1,0 +1,150 @@
+{
+  "config": {
+    "BASE": "http://localhost:8080",
+    "USERS": 1,
+    "MESSAGES": 10,
+    "LABEL": "before"
+  },
+  "summary": {
+    "requests": 10,
+    "succeeded": 10,
+    "failed": 0,
+    "errors": {},
+    "wallSeconds": 89.5,
+    "successfulRequestsPerSecond": 0.11
+  },
+  "rows": [
+    {
+      "metric": "before LLM: headers (ms)",
+      "p50": 556.6,
+      "p95": 1243.7,
+      "p99": 1243.7,
+      "avg": 632.1,
+      "max": 1243.7
+    },
+    {
+      "metric": "TTFT (ms)",
+      "p50": 2264,
+      "p95": 19568.8,
+      "p99": 19568.8,
+      "avg": 7715.1,
+      "max": 19568.8
+    },
+    {
+      "metric": "end-to-end (ms)",
+      "p50": 3134.8,
+      "p95": 20814.6,
+      "p99": 20814.6,
+      "avg": 8890.9,
+      "max": 20814.6
+    },
+    {
+      "metric": "inter-token (ms)",
+      "p50": 2.1,
+      "p95": 5.5,
+      "p99": 5.5,
+      "avg": 2.6,
+      "max": 5.5
+    },
+    {
+      "metric": "stream chunks/s per request",
+      "p50": 456,
+      "p95": 691.8,
+      "p99": 691.8,
+      "avg": 449.7,
+      "max": 691.8
+    }
+  ],
+  "results": [
+    {
+      "ok": true,
+      "status": 200,
+      "headersMs": 568.1637000000001,
+      "ttft": 1561.6162999999997,
+      "e2e": 2026.0487999999996,
+      "tokens": 220,
+      "error": null
+    },
+    {
+      "ok": true,
+      "status": 200,
+      "headersMs": 595.525599999999,
+      "ttft": 1408.5681999999997,
+      "e2e": 1634.2335999999996,
+      "tokens": 86,
+      "error": null
+    },
+    {
+      "ok": true,
+      "status": 200,
+      "headersMs": 527.0251000000007,
+      "ttft": 1959.8396000000012,
+      "e2e": 3134.793100000001,
+      "tokens": 636,
+      "error": null
+    },
+    {
+      "ok": true,
+      "status": 200,
+      "headersMs": 543.1584000000003,
+      "ttft": 2263.9858000000004,
+      "e2e": 3039.9359000000004,
+      "tokens": 430,
+      "error": null
+    },
+    {
+      "ok": true,
+      "status": 200,
+      "headersMs": 570.6915999999983,
+      "ttft": 1431.7265999999981,
+      "e2e": 2948.0717000000004,
+      "tokens": 547,
+      "error": null
+    },
+    {
+      "ok": true,
+      "status": 200,
+      "headersMs": 531.8163999999997,
+      "ttft": 19568.768699999997,
+      "e2e": 20814.6134,
+      "tokens": 701,
+      "error": null
+    },
+    {
+      "ok": true,
+      "status": 200,
+      "headersMs": 532.794799999996,
+      "ttft": 17191.618000000002,
+      "e2e": 17646.9202,
+      "tokens": 315,
+      "error": null
+    },
+    {
+      "ok": true,
+      "status": 200,
+      "headersMs": 556.6309000000037,
+      "ttft": 14584.275400000006,
+      "e2e": 16895.156899999994,
+      "tokens": 419,
+      "error": null
+    },
+    {
+      "ok": true,
+      "status": 200,
+      "headersMs": 1243.6765000000014,
+      "ttft": 3171.6480999999912,
+      "e2e": 4230.860000000001,
+      "tokens": 483,
+      "error": null
+    },
+    {
+      "ok": true,
+      "status": 200,
+      "headersMs": 651.8502000000008,
+      "ttft": 14009.444600000003,
+      "e2e": 16537.891399999993,
+      "tokens": 745,
+      "error": null
+    }
+  ]
+}
